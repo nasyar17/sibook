@@ -69,9 +69,26 @@
    <script src="/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
    <script src="/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
    <script src="/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-   <script src="/assets/dist/js/my-datatable.js"></script>
    <!-- AdminLTE App -->
    <script src="/assets/dist/js/adminlte.min.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function() {
+         var table = $('#tableBook').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "order": [],
+            "ajax": {
+               "url": "<?php echo site_url('buku/ajaxList') ?>",
+               "type": "POST"
+            },
+            "columnDefs": [{
+               "targets": [],
+               "orderable": false,
+            }, ],
+         });
+      });
+   </script>
 </body>
 
 </html>

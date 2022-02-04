@@ -42,14 +42,15 @@
                </a>
             </li>
 
-            <li class="nav-item menu-open">
-               <a href="#" class="nav-link">
+            <?php $data = ['Data Buku']; ?>
+            <li class="nav-item <?= in_array($title, $data) ? 'menu-open' : ''; ?>">
+               <a href="#" class="nav-link <?= in_array($title, $data) ? 'active' : ''; ?>">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>Data <i class="right fas fa-angle-left"></i></p>
                </a>
                <ul class="nav nav-treeview">
-                  <li class="nav-item <?= $title == 'Data Buku' ? 'active' : ''; ?>">
-                     <a href="/buku" class="nav-link">
+                  <li class="nav-item">
+                     <a href="/buku" class="nav-link <?= $title == 'Data Buku' ? 'active' : ''; ?>">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Buku</p>
                      </a>

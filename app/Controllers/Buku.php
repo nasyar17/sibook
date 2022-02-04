@@ -28,6 +28,7 @@ class Buku extends BaseController
             $no++;
             $row = [];
             $row[] = $no;
+            $row[] = $list->buku_id;
             $row[] = $list->buku_judul;
             $row[] = $list->buku_pengarang;
             $row[] = $list->buku_penerbit;

@@ -25,12 +25,13 @@
                   <a href="" class="btn btn-primary btn-sm float-right">New Record</a>
                </div>
                <div class="card-body">
-                  <table id="buku-table" class="table table-striped table-bordered table-hover">
+                  <table id="tableBook" class="table table-striped table-bordered table-hover">
                      <thead>
                         <tr>
                            <td>No</td>
+                           <td>ID Buku</td>
                            <td>Judul</td>
-                           <td>Pengaran</td>
+                           <td>Pengarang</td>
                            <td>Penerbit</td>
                            <td>Tahun</td>
                         </tr>
@@ -38,14 +39,11 @@
                      <tbody>
                      </tbody>
                   </table>
-
                </div>
-
             </div>
          </div>
       </div>
    </div>
 </div>
-
 
 <?= $this->endSection(); ?>
